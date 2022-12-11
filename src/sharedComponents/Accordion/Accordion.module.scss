@@ -1,0 +1,114 @@
+.Accordion {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+.titleBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+  text-align: start;
+  border-bottom: 1px solid hsla(0,0%,100%,0.5);
+
+  @media (hover: hover) {
+    &:hover .arrow::after {
+      opacity: 1;
+    }
+  }
+  &.open .arrow::after {
+      transform: translate(-50%, -75%) rotate(45deg);
+      opacity: 1;
+  }
+  .titleWrapper {
+    flex-grow: 1;
+  }
+  .arrow {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 12px;
+      width: 12px;
+      border: solid white;
+      border-width: 0 5px 5px 0;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 50%;
+      transform: translate(-75%, -50%) rotate(-45deg);
+      transition: transform 150ms, opacity 500ms;
+      opacity: 0.5;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+    }
+  }
+}
+.listWrapper {
+  transition: height 500ms;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    .listElement {
+      width: 100%;
+      border-bottom: 1px solid var(--textColorShy);
+      box-sizing: border-box;
+    }
+  }
+}
+.bottomButton {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  background-color: var(--backgroundColor);
+
+  @media (hover: hover) {
+    &:hover .buttonText {
+      color: var(--textColorImportant);
+    }
+  }
+  .buttonText {
+    color: var(--textColorShy);
+    transition: color 500ms;
+  }
+
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+}

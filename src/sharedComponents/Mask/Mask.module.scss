@@ -1,0 +1,37 @@
+.Mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(0,0%,0%,0);
+  z-index: 1000;
+  display: none;
+  &Enter {
+    display: block;
+    background-color: hsla(0,0%,0%,0);
+  }
+  &EnterActive {
+    display: block;
+    background-color: hsla(0,0%,0%,0.5);
+    transition: background-color 500ms;
+  }
+  &EnterDone {
+    display: block;
+    background-color: hsla(0,0%,0%,0.5);
+  }
+  &Exit {
+    display: block;
+    background-color: hsla(0,0%,0%,0.5);
+  }
+  &ExitActive {
+    display: block;
+    background-color: hsla(0,0%,0%,0);
+    transition: background-color 500ms;
+  }
+  &ExitDone {
+    display: none;
+    background-color: hsla(0,0%,0%,0);
+  }
+}

@@ -1,0 +1,39 @@
+.TitleBanner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  word-break: break-word;
+  text-shadow: 0px 0px 5px black;
+  .textWrapper {
+    margin-top: auto;
+    padding: 1.5rem 0;
+    margin-right: calc(400px + 2rem);
+    @media screen and (max-width: 900px) {
+      margin-right: 0;
+    }
+    .titleBlock {
+      margin-bottom: 1rem;
+      .title {
+        color: var(--textColorImportant);
+        font-size: 3rem;
+        margin: 0;
+      }
+      .bottomLine {
+        display: flex;
+        color: var(--textColorShy);
+        .year {
+          margin: 0;
+          margin-right: 1rem;
+        }
+        .runtime {
+          margin: 0;
+        }
+      }
+      .originalTitle {
+        margin: 0;
+        color: var(--textColorShy);
+        font-size: 1rem;
+      }
+    }
+  }
+}

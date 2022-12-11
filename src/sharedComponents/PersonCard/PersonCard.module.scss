@@ -1,0 +1,61 @@
+.PersonCard {
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgroundColorCard);
+  box-shadow: 0 0 5px black;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 500ms;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover .image {
+      transform: scale(1.2);
+      filter: grayscale(1.0);
+    }
+    &:hover  {
+      opacity: 0.75;
+    }
+  }
+}
+.imageWrapper {
+  position: relative;
+  line-height: 0;
+  align-self: center;
+  aspect-ratio: 2/3;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3;
+  background-color: var(--backgroundColorImage);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    object-fit: cover;
+    transition: transform 500ms, filter 500ms;
+  }
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  .title {
+    margin: 0.5rem;
+    text-align: center;
+    word-break: break-word;
+    color: var(--textColorImportant);
+  }
+  .department {
+    margin: 0 0.5rem;
+    color: var(--textColorShy);
+    text-align: center;
+    word-break: break-word;
+  }
+}

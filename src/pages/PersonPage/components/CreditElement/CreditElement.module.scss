@@ -1,0 +1,19 @@
+.CreditElement {
+  width: 100%;
+  display: flex;
+  padding: 0 0.5rem;
+}
+.year {
+  min-width: 60px;
+  color: var(--textColorShy);
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-weight: bold;
+  color: var(--textColorImportant);
+}
+.moreInfo {
+  color: var(--textColorNormal);
+  font-weight: normal;
+}

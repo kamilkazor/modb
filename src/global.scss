@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Cabin_Condensed/CabinCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/Cabin_Condensed/CabinCondensed-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/Cabin_Condensed/CabinCondensed-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/Cabin_Condensed/CabinCondensed-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Symbols Sharp';
+  font-style: normal;
+  font-display: block;
+  src: url('./assets/fonts/MaterialSymbolsSharp[FILL\,GRAD\,opsz\,wght].ttf') format('truetype');
+}
+.material-symbols {
+  font-family: 'Material Symbols Sharp';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  font-variation-settings:
+  'FILL' 1,
+  // 'wght' 400,
+  // 'GRAD' 200,
+  // 'opsz' 48
+}
+
+:root {
+  --maxContentWidth: 1200px;
+  --contentMargin: 50px;
+  --navbarHeight: 85px;
+
+  --textColorImportant: hsl(0,0%,100%);
+  --textColorNormal: hsla(0,0%,100%, 0.75);
+  --textColorShy: hsla(0,0%,100%, 0.5);
+
+  --backgroundColor: hsl(0,0%,2%);
+  --backgroundColorCard: hsl(0,0%,3%);
+  --backgroundColorImage: hsl(0,0%,6%);
+
+  --accentColor: hsla(41,100%,45.3%,1);
+
+  --scrollbarTrackColor: hsl(0,0%,6%);
+  --scrollbarThumbColor: hsl(0,0%,12%);
+  --scrollbarThumbHoverColor: hsl(0,0%,18%);
+
+  @media screen and (max-width: 700px) {
+    --contentMargin: 25px;
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Cabin Condensed', sans-serif;
+  font-size: 17px;
+
+  scrollbar-color: var(--scrollbarThumbColor) var(--scrollbarTrackColor);
+  &::-webkit-scrollbar {
+    width: auto;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbarTrackColor);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumbColor);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbarThumbHoverColor);
+  }
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+

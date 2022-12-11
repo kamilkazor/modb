@@ -1,0 +1,78 @@
+.SeasonTitleBar {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+}
+.contentWrapper {
+  display: flex;
+  align-items: flex-start;
+  @media screen and (max-width: 350px) {
+    flex-direction: column;
+  }
+  .poster {
+    width: 150px;
+    aspect-ratio: 2/3;
+    box-shadow: 0 0 5px black;
+    line-height: 0;
+    flex: 0 0 auto;
+    align-self: center;
+    @media screen and (max-width: 600px) {
+      width: 100px;
+    }
+    @media screen and (max-width: 350px) {
+      width: auto;
+      align-self: stretch;
+      flex: 1 1 auto;
+      margin: 1rem;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+  .textWrapper {
+    color: var(--textColorImportant);
+    margin: 0 1rem;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    @media screen and (max-width: 350px) {
+      margin-left: 0;
+    }
+    .name {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .episodeCount {
+      color: var(--textColorShy);
+      margin: 0;
+      margin-top: 0.25rem;
+    }
+    .date {
+      color: var(--textColorShy);
+      margin: 0;
+      margin-top: auto;
+    }
+    .overview {
+      color: var(--textColorNormal);
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+      @media screen and (max-width: 350px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+.forSmallDevices {
+  display: none;
+  margin: 0;
+  color: var(--textColorNormal);
+  @media screen and (max-width: 500px) {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 350px) {
+    display: none;
+    margin: 0;
+  }
+}

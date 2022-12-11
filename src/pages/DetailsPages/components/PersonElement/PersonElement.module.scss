@@ -1,0 +1,31 @@
+.PersonElement {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+.profileImage {
+  width: 100px;
+  aspect-ratio: 2/3;
+  box-shadow: 0 0 5px black;
+  line-height: 0;
+  flex-shrink: 0;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 1rem;
+  word-break: break-word;
+  .details {
+    color: var(--textColorShy);
+    margin:0;
+    margin-bottom: 0.5rem;
+  }
+  .name {
+    color: var(--textColorImportant);
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+}

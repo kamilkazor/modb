@@ -1,0 +1,142 @@
+.Slider {
+  // Functional variables. Don't change them
+  --movedElements: 0;
+  --elementWidth: calc(100% / var(--visibleElements));
+  --translateAmount: 0px;
+
+  // Number of visible slides. You can change it. Don't remove
+  --visibleElements: 5;
+
+  // Style only variables
+  --buttonSize: var(--contentMargin);
+  --gapWidth: 6px;
+
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.5rem 0;
+
+  @media screen and (max-width: 950px) {
+    --visibleElements: 4;
+  }
+  @media screen and (max-width: 750px) {
+    --visibleElements: 3;
+  }
+  @media screen and (max-width: 550px) {
+    --visibleElements: 2;
+  }
+  @media screen and (max-width: 300px) {
+    --visibleElements: 1;
+  }
+  @media(hover: hover) {
+    &:hover .button.right::after, &:hover .button.left::after {
+      opacity: 0.5;
+    }
+  }
+}
+.track {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 calc(var(--gapWidth) / 2 + var(--buttonSize));
+  .button {
+    -webkit-tap-highlight-color: transparent;
+    z-index: 2;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    width: var(--buttonSize);
+    height: calc(100% + 1px);
+    
+    opacity: 0;
+    transition: opacity 500ms;
+    &.left {
+      left: 0;
+      background-image: linear-gradient(90deg, var(--backgroundColor) 0%, transparent 100%);
+
+      @media (hover: hover) {
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: solid white;
+        border-width: 0 calc(var(--buttonSize) / 10) calc(var(--buttonSize) / 10) 0;
+        width: calc(var(--buttonSize) / 3);
+        height: calc(var(--buttonSize) / 3);
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, -50%) rotate(135deg);
+
+        opacity: 0;
+        transition: all 500ms;
+      }
+    }
+    &.right {
+      right: 0;
+      background-image: linear-gradient(90deg, transparent 0%, var(--backgroundColor) 100%);
+
+      @media (hover: hover) {
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: solid white;
+        border-width: 0 calc(var(--buttonSize) / 10) calc(var(--buttonSize) / 10) 0;
+        width: calc(var(--buttonSize) / 3);
+        height: calc(var(--buttonSize) / 3);
+        top: 50%;
+        left: 50%;
+        transform: translate(-75%, -50%) rotate(-45deg);
+
+        opacity: 0;
+        transition: all 500ms;
+      }
+    }
+    &.show {
+      cursor: pointer;
+      opacity: 1;
+    }
+    &.hide {
+      opacity: 0;
+    }
+  }
+  .listWrapper {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    .list {
+      display:flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      transform: translateX(calc(var(--movedElements) * var(--elementWidth) * -1));
+      transition: transform 500ms;
+      &.hold {
+        transform: translateX(var(--translateAmount));
+        transition: none;
+      }
+      .listElement {
+        display: flex;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+        width: var(--elementWidth);
+        padding:  calc(var(--gapWidth) / 2);
+      }
+    }
+  }
+}

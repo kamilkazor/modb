@@ -1,0 +1,21 @@
+.movies {
+  max-width: var(--maxContentWidth);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.tvShows {
+  max-width: var(--maxContentWidth);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.titleWrapper {
+  margin: 0 var(--contentMargin);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .title {
+    margin: 0.5rem 1rem 0.5rem 0;
+    padding: 0;
+    color: var(--textColorImportant);
+  }
+}

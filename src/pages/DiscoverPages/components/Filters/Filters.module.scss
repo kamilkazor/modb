@@ -1,0 +1,72 @@
+.Filters {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  position: relative;
+}
+.filtersBar {
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.options {
+  list-style: none;
+  width: 100%;
+  max-width: var(--maxContentWidth);
+  padding: 0 var(--contentMargin);
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .option {
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--textColorShy);
+    transition: color 500ms;
+    @media (hover:hover) {
+      &:hover {
+        color: var(--textColorImportant);
+      }
+    }
+    &.selected {
+      color: var(--textColorImportant);
+    }
+    &.modified {
+      &::after {
+        content: "";
+        background-color: var(--textColorNormal);
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        right: -16px;
+      }
+      @media screen and (max-width: 800px) {
+        &::after {
+          right: -10px;
+        }
+      }
+    }
+    .icon {
+      font-size: 1.5rem;
+    }
+    .label {
+      margin-left: 0.5rem;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+}

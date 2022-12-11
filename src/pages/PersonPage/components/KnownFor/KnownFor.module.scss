@@ -1,0 +1,13 @@
+.KnownFor {
+  max-width: var(--maxContentWidth);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.titleWrapper {
+  margin: 0.5rem var(--contentMargin);
+}
+.noData {
+  font-style: italic;
+  color: var(--textColorShy);
+  margin: 1rem var(--contentMargin);
+}

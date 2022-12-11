@@ -1,0 +1,21 @@
+.sortByWindow {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  .sortingOption {
+    color: var(--textColorShy);
+    padding:0.5rem;
+    transition: color 500ms;
+    @media (hover: hover) {
+      &:hover {
+        color: var(--textColorImportant)
+      }
+    }
+  }
+  .selected {
+    color: var(--textColorImportant);
+  }
+}

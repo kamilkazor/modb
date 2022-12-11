@@ -1,0 +1,47 @@
+.ReleaseWindow {
+  width: 350px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  .title {
+    font-weight: normal;
+    color: var(--textColorShy);
+    margin: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .value {
+    color: var(--textColorImportant);
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+  .years {
+    margin-bottom: 2rem;
+  }
+  .labels {
+    display: flex;
+    justify-content: space-between;
+  }
+  .label {
+    color: var(--textColorShy);
+    margin: 0.5rem 0;
+  }
+  .upcommingButton {
+    cursor: pointer;
+    border: 1px solid var(--textColorShy);
+    padding: 1rem;
+    transition: border 500ms;
+    display: flex;
+    justify-content: center;
+    color: var(--textColorShy);
+    width: 100%;
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

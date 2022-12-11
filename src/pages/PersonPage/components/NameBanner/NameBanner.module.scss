@@ -1,0 +1,61 @@
+.NameBanner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  word-break: break-word;
+  text-shadow: 0px 0px 5px black;
+  .contentWrapper {
+    box-sizing: border-box;
+    margin-top: auto;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: flex-end;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+  .profileWrapper {
+    width: 200px;
+    aspect-ratio: 2/3;
+    box-shadow: 0 0 5px black;
+    line-height: 0;
+    flex: 0 0 auto;
+    @media screen and (max-width: 800px) {
+      margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+  }
+  .textWrapper {
+    color: var(--textColorImportant);
+    padding: 0 1rem;
+    @media screen and (max-width: 800px) {
+      padding: 0;
+    }
+    .name {
+      margin: 0;
+      font-size: 2.5rem;
+      width: 100%;
+    }
+    .alsoKnown {
+      color: var(--textColorShy);
+      margin-top: 0;
+    }
+    .info {
+      margin-right: 1rem;
+      margin-bottom: 0;
+      .label {
+        color: var(--textColorImportant);
+        margin: 0;
+        font-weight: bold;
+      }
+      .value {
+        color: var(--textColorNormal);
+      }
+    }
+  }
+}

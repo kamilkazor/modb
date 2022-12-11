@@ -1,0 +1,17 @@
+.Recommendations {
+  max-width: var(--maxContentWidth);
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.titleWrapper {
+  margin: 0 var(--contentMargin);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.noData {
+  font-style: italic;
+  color: var(--textColorShy);
+  margin: 1rem var(--contentMargin);
+}

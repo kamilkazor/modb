@@ -1,0 +1,46 @@
+.Banner {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: black;
+  margin-bottom: 1rem;
+}
+.backdropWrapper {
+  position: absolute;
+  width: 100%;
+  max-width: 1500px;
+  max-width: 1350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  .backdropCover {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    width: 1350px;
+    height: 140%;
+
+    box-shadow: inset 0 0 60px 60px black, inset 0 0 200px 200px black;
+  }
+  .backdrop {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1000ms;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+}
+.contentWrapper {
+  width: 100%;
+  max-width: var(--maxContentWidth);
+  padding: 0 var(--contentMargin);
+  box-sizing: border-box;
+  z-index: 3;
+}

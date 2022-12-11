@@ -1,0 +1,49 @@
+.RatingsWindow {
+  width: 500px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+  .rating {
+    margin-bottom: 0;
+  }
+  .ratingScore {
+    margin-bottom: 3rem;
+  }
+  .voteCount {
+    margin-bottom: 1rem;
+  }
+  .title {
+    font-weight: normal;
+    color: var(--textColorShy);
+    margin: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    font-size: 1rem;
+    // font-size: 1.2rem;
+  }
+  .value {
+    color: var(--textColorImportant);
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+  .star {
+    margin-left: 0.1rem;
+    font-size: 110%;
+    color: var(--accentColor);
+  }
+  .labels {
+    display: flex;
+    justify-content: space-between;
+  }
+  .label {
+    color: var(--textColorShy);
+    margin: 0.5rem 0;
+  }
+}

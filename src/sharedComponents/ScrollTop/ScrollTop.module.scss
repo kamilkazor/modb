@@ -1,0 +1,52 @@
+.scrollTop {
+  position: fixed;
+  height: 70px;
+  top: -70px;
+  width: 100%;
+  max-width: var(--maxContentWidth);
+  padding: 0 var(--contentMargin);
+  box-sizing: border-box;
+  z-index: 200;
+  .button {
+    transform: translateY(calc(100vh - 2* var(--contentMargin)));
+    margin-left: auto;
+    margin-right: var(--contentMargin);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background-color: var(--accentColor);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    &Enter {
+      opacity: 0;
+      display: flex;
+    }
+    &EnterActive {
+      opacity: 1;
+      transition: opacity 500ms;
+      display: flex;
+    }
+    &EnterDone {
+      opacity: 1;
+      display: flex;
+    }
+    &Exit {
+      opacity: 1;
+      display: flex;
+    }
+    &ExitActive {
+      opacity: 0;
+      transition: opacity 500ms;
+      display: flex;
+    }
+    &ExidDone {
+      opacity: 0;
+      display: none;
+    }
+  }
+}

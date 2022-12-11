@@ -1,0 +1,135 @@
+.PopupWindow {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: calc(var(--navbarHeight) * 3) 0;
+  transform: translateY(100vh);
+  z-index: 1000;
+
+  @media screen and (max-width: 700px) {
+    padding: 0;
+    padding-top: calc(var(--navbarHeight) *2);
+    // background-color: var(--backgroundColorCard);
+  }
+
+  &Enter {
+    visibility: visible;
+    transform: translateY(100vh);
+  }
+  &EnterActive {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 500ms;
+  }
+  &EnterDone {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &Exit {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &ExitActive {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 500ms;
+    transform: translateY(0);
+  }
+  &ExitDone {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.window {
+  background-color: var(--backgroundColorCard);
+  box-shadow: 0 0 5px black;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    min-height: 100%;
+    box-shadow: none;
+  }
+}
+.bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 0 1rem;
+  border-bottom: 1px solid var(--textColorShy);
+}
+.title {
+  font-weight: normal;
+  color: var(--textColorImportant);
+}
+.button {
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColorShy);
+  transition: color 500ms;
+
+  @media (hover: hover) {
+    &:hover{
+      color: var(--textColorImportant);
+    }
+  }
+}
+.resetButton {
+  font-size: 0.85rem;
+  position: absolute;
+  left: 0;
+}
+.closeButton {
+  position: absolute;
+  right: 0;
+}
+.bottomBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-top: auto;
+  background-color: var(--backgroundColorCard);
+}
+.nextButton {
+  font-size: 0.85rem;
+}
+.applyButton {
+  font-size: 0.85rem;
+  color: var(--accentColor);
+  // font-weight: bold;
+  @media (hover: hover) {
+    &:hover{
+      color: var(--accentColor);
+    }
+  }
+}
+.contentWrapper {
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(--backgroundColorCard);
+}

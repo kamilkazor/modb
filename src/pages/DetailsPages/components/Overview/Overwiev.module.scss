@@ -1,0 +1,72 @@
+.Overview {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxContentWidth);
+  padding: 0 var(--contentMargin);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+  .textWrapper {
+    width: 100%;
+    padding-right: calc(400px + 2rem);
+    box-sizing: border-box;
+    
+    color: var(--textColorNormal);
+    @media screen and (max-width: 900px) {
+      padding-right: 2rem;
+    }
+    @media screen and (max-width: 600px) {
+      padding-right: 0;
+    }
+    .overviewText {
+      margin-bottom: 2rem;
+      color: var(--textColorNormal);
+    }
+    .noData {
+      font-style: italic;
+      color: var(--textColorShy);
+    }
+    .label {
+      color: var(--textColorImportant);
+      font-weight: bold;
+    }
+  }
+  .posterWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-30%);
+    width: 400px;
+    aspect-ratio: 2/3;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin-right: var(--contentMargin);
+
+    box-shadow: 0 0 5px black;
+    line-height: 0;
+    @media screen and (max-width: 900px) {
+      position: relative;
+      transform: translateY(0);
+      max-width: 300px;
+      margin-top: 1rem;
+      margin-right: 0;
+      flex: 0 1 auto;
+    }
+    @media screen and (max-width: 600px) {
+      flex: 1 0 auto;
+      max-width: none;
+      align-self: stretch;
+      width: auto;
+    }
+    .poster{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
