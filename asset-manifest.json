@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/modb/static/css/main.775e2153.css",
+    "main.js": "/modb/static/js/main.d3f194e2.js",
+    "static/media/MaterialSymbolsSharp[FILL,GRAD,opsz,wght].ttf": "/modb/static/media/MaterialSymbolsSharp[FILL,GRAD,opsz,wght].632a50ed9d994b04d4a6.ttf",
+    "static/media/stars.jpg": "/modb/static/media/stars.e5c3d8ca376ff81d6bf6.jpg",
+    "static/media/altBackdrop.jpg": "/modb/static/media/altBackdrop.05caa5781b6fc2f7139d.jpg",
+    "static/media/CabinCondensed-Regular.ttf": "/modb/static/media/CabinCondensed-Regular.7633b5752141cd007456.ttf",
+    "static/media/CabinCondensed-SemiBold.ttf": "/modb/static/media/CabinCondensed-SemiBold.41b2ae9a3c9377e117b8.ttf",
+    "static/media/CabinCondensed-Medium.ttf": "/modb/static/media/CabinCondensed-Medium.285348aac60e92613d4d.ttf",
+    "static/media/CabinCondensed-Bold.ttf": "/modb/static/media/CabinCondensed-Bold.d4012cc73f267f988285.ttf",
+    "static/media/Logo.svg": "/modb/static/media/Logo.542aacf22812a826b00b3f74da245827.svg",
+    "static/media/tmdb-logo-short.svg": "/modb/static/media/tmdb-logo-short.de1a664e8d0777ca4ddb2a5a298bcfb6.svg",
+    "static/media/tmdb-logo-long.svg": "/modb/static/media/tmdb-logo-long.caee745762db3e030d38ebb5a167ae05.svg",
+    "static/media/github-icon.svg": "/modb/static/media/github-icon.b40b1c0378274f892133dea1253e8aa8.svg",
+    "index.html": "/modb/index.html",
+    "main.775e2153.css.map": "/modb/static/css/main.775e2153.css.map",
+    "main.d3f194e2.js.map": "/modb/static/js/main.d3f194e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.775e2153.css",
+    "static/js/main.d3f194e2.js"
+  ]
+}
