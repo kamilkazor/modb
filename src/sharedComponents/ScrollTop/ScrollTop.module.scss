@@ -8,7 +8,7 @@
   box-sizing: border-box;
   z-index: 200;
   .button {
-    transform: translateY(calc(100vh - 2* var(--contentMargin)));
+    transform: translateY(calc(100vh - 4* var(--contentMargin)));
     margin-left: auto;
     margin-right: var(--contentMargin);
     border-radius: 50%;
