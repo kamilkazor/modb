@@ -67,7 +67,7 @@ const Search: React.FC<Props> = ({open, setOpen, buttonsRef}) => {
         if(result.media_type === "tv") {
           options.push(createOption(
             i+1, 
-            `/tv/${result.id}`,
+            `/show/${result.id}`,
             "TV Show: ",
             result.name,
             result.first_air_date,
