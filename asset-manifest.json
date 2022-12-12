@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/modb/static/css/main.775e2153.css",
+    "main.css": "/modb/static/css/main.0571d218.css",
     "main.js": "/modb/static/js/main.d599a938.js",
     "static/media/MaterialSymbolsSharp[FILL,GRAD,opsz,wght].ttf": "/modb/static/media/MaterialSymbolsSharp[FILL,GRAD,opsz,wght].632a50ed9d994b04d4a6.ttf",
     "static/media/stars.jpg": "/modb/static/media/stars.e5c3d8ca376ff81d6bf6.jpg",
@@ -14,11 +14,11 @@
     "static/media/tmdb-logo-long.svg": "/modb/static/media/tmdb-logo-long.caee745762db3e030d38ebb5a167ae05.svg",
     "static/media/github-icon.svg": "/modb/static/media/github-icon.b40b1c0378274f892133dea1253e8aa8.svg",
     "index.html": "/modb/index.html",
-    "main.775e2153.css.map": "/modb/static/css/main.775e2153.css.map",
+    "main.0571d218.css.map": "/modb/static/css/main.0571d218.css.map",
     "main.d599a938.js.map": "/modb/static/js/main.d599a938.js.map"
   },
   "entrypoints": [
-    "static/css/main.775e2153.css",
+    "static/css/main.0571d218.css",
     "static/js/main.d599a938.js"
   ]
 }
