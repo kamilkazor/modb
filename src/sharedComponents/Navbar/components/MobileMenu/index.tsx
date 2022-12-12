@@ -5,7 +5,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Mask from '../../../Mask';
 import {ReactComponent as Logo} from "../../../../assets/Logo.svg"
-import {useSetScrollContext} from '../../../../providers/DissableScrollProvider';
 
 interface Props {
   children: React.ReactNode;
@@ -20,13 +19,6 @@ const location = useLocation();
 useEffect(() => {
   setOpen(false);
 },[location])
-  const setScrollContext = useSetScrollContext();
-  useEffect(() => {
-    open ? setScrollContext(false) : setScrollContext(true);
-    return () => {
-      setScrollContext(true);
-    }
-  },[open])
 
   return (
     <>
