@@ -56,73 +56,17 @@ const Navbar: React.FC = () => {
     }
   },[]);
 
-
   return (
-    <>
+    <nav>
       <div className={styles.placeholder}></div>
-      <nav 
-        className={`
-        ${styles.Navbar}
-        ${sticky && styles.sticky}
-        ${show && styles.show}
-        `}
-      > 
-        <Search open={openSearch} setOpen={setOpenSearch} buttonsRef={[searchButtonRef, mobileSearchButtonRef]}/>
-        <div className={styles.content}>
-          <div className={styles.mobile}>
-            <MobileMenu open={openMenu} setOpen={setOpenMenu}>
-              <div className={styles.menuOptions}>
-              <ul className={styles.links}>
-                <li className={`
-                  ${styles.link} ${location.pathname === "/" && styles.activePath}
-                `}>
-                  <Link to={"/"}>HOME</Link>
-                </li>
-                <li className={`
-                  ${styles.link} ${location.pathname === "/movies" && styles.activePath}
-                `}>
-                  <Link to={"/movies"}>MOVIES</Link>
-                </li>
-                <li className={`
-                  ${styles.link} ${location.pathname === "/shows" && styles.activePath}
-                `}>
-                  <Link to={"/shows"}>TV SHOWS</Link>
-                </li>
-              </ul>
-                <ul className={`${styles.links} ${styles.external}`}>
-                  <li className={styles.link}>
-                    <a 
-                      href="https://github.com/kamilkazor/modb"
-                      className={styles.externalLink}
-                    >
-                      <GithubIcon className={styles.githubIcon}/>
-                      <span className={styles.linkLabel}>PROJECT</span>
-                    </a>
-                  </li>
-                  <li className={styles.link}>
-                    <a 
-                      href="https://www.themoviedb.org/documentation/api" 
-                      className={styles.externalLink}
-                    >
-                      <div className={styles.apiIcon}>API</div>
-                      <span className={styles.linkLabel}>TMDB</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </MobileMenu>
-            <button onClick={() => {setOpenMenu(true)}}>
-              <i className={`material-symbols ${styles.hamburger}`}>menu</i>
-            </button>
-            <button 
-              ref={mobileSearchButtonRef}
-              className={`${styles.searchButton} ${openSearch && styles.active}`} 
-              onClick={() => {setOpenSearch(!openSearch)}}
-            >
-              <i className={`material-symbols  ${styles.lupe}`}>search</i>
-            </button>
-          </div>
-          <div className={styles.largeDevices}>
+      <div className={styles.largeDevices}>
+        <div className={`
+          ${styles.Navbar}
+          ${sticky && styles.sticky}
+          ${show && styles.show}
+        `}>
+          <Search open={openSearch} setOpen={setOpenSearch} buttonsRef={[searchButtonRef, mobileSearchButtonRef]}/>
+          <div className={styles.content}>
             <Link to="/"><Logo className={styles.logo}/></Link>
             <ul className={styles.links}>
               <li className={`
@@ -164,9 +108,71 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
-      </nav>
-    </>
-  );
+      </div>
+      <div className={styles.mobile}>
+        <div className={`
+          ${styles.Navbar}
+          ${sticky && styles.sticky}
+          ${show && styles.show}
+        `}>
+          <Search open={openSearch} setOpen={setOpenSearch} buttonsRef={[searchButtonRef, mobileSearchButtonRef]}/>
+          <div className={styles.content}>
+            <button onClick={() => {setOpenMenu(true)}}>
+                <i className={`material-symbols ${styles.hamburger}`}>menu</i>
+            </button>
+            <button 
+              ref={mobileSearchButtonRef}
+              className={`${styles.searchButton} ${openSearch && styles.active}`} 
+              onClick={() => {setOpenSearch(!openSearch)}}
+            >
+              <i className={`material-symbols  ${styles.lupe}`}>search</i>
+            </button>
+          </div>
+        </div>
+        <MobileMenu open={openMenu} setOpen={setOpenMenu}>
+          <div className={styles.menuOptions}>
+          <ul className={styles.links}>
+            <li className={`
+              ${styles.link} ${location.pathname === "/" && styles.activePath}
+            `}>
+              <Link to={"/"}>HOME</Link>
+            </li>
+            <li className={`
+              ${styles.link} ${location.pathname === "/movies" && styles.activePath}
+            `}>
+              <Link to={"/movies"}>MOVIES</Link>
+            </li>
+            <li className={`
+              ${styles.link} ${location.pathname === "/shows" && styles.activePath}
+            `}>
+              <Link to={"/shows"}>TV SHOWS</Link>
+            </li>
+          </ul>
+            <ul className={`${styles.links} ${styles.external}`}>
+              <li className={styles.link}>
+                <a 
+                  href="https://github.com/kamilkazor/modb"
+                  className={styles.externalLink}
+                >
+                  <GithubIcon className={styles.githubIcon}/>
+                  <span className={styles.linkLabel}>PROJECT</span>
+                </a>
+              </li>
+              <li className={styles.link}>
+                <a 
+                  href="https://www.themoviedb.org/documentation/api" 
+                  className={styles.externalLink}
+                >
+                  <div className={styles.apiIcon}>API</div>
+                  <span className={styles.linkLabel}>TMDB</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </MobileMenu>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar;
