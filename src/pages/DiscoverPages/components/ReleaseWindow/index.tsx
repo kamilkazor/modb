@@ -79,6 +79,7 @@ const ReleaseWindow: React.FC<Props> = ({
       : searchParams.set(maxYearKey, `${maxYear}-12-31`);
     }
     setSearchParams(searchParams);
+    onClose();
   }
 
   function setFromQuery() {

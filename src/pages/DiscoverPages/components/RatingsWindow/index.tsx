@@ -58,6 +58,7 @@ const RatingsWindow: React.FC<Props> = ({
     ? searchParams.delete("vote_count.lte") 
     : searchParams.set("vote_count.lte", maxVoteCountValue.toString());
     setSearchParams(searchParams);
+    onClose();
   }
 
   function setFromQuery() {

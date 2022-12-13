@@ -52,6 +52,7 @@ const GenresWindow: React.FC<Props> = ({
     ? searchParams.delete("without_genres")
     : searchParams.set("without_genres", excludeGenres.join(","));
     setSearchParams(searchParams);
+    onClose();
   }
   function setFromQuery() {
     let modified = false;

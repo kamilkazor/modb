@@ -43,6 +43,7 @@ const SortByWindow: React.FC<Props> = ({
     ? searchParams.delete("sort_by")
     : searchParams.set("sort_by", sortBy);
     setSearchParams(searchParams);
+    onClose();
   }
 
   function setFromQuery() {
