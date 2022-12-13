@@ -34,11 +34,12 @@ const MovieFilters: React.FC<Props> = ({mediaType}) => {
 
   function resetAll() {
     if(mediaType === "MOVIE") {
-      navigate("/movies")
+      navigate("/movies");
     }
     if(mediaType === "TV") {
       navigate("/shows")
     }
+    setOpen(null);
   }
 
   return (
